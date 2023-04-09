@@ -12,7 +12,7 @@
 <img src="images/AO3 dashbaord.jpg?raw=true">
 
 ---
-[Comparative Analysis of Gamification in Education in R](http://example.com/)
+[Comparative Analysis of Gamification in Education in R](https://www.kaggle.com/code/ashleylevy/gamification-effect-on-student-test-scores)
 <img src="images/gamification.jpg?raw=true"/>
 
 
