@@ -9,7 +9,7 @@
 
 ---
 [Archive of Our Own Data Dump Explortory Data Analysis using BigQuery and Looker](/pdf/sample_presentation.pdf)
-<img src="images/AO3 dashbaord.jpg/?raw=true">
+<img src="images/AO3 dashbaord.jpg?raw=true">
 
 ---
 [Comparative Analysis of Gamification in Education in R](http://example.com/)
