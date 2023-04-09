@@ -4,18 +4,24 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
+[DDOS Attack Detection Using BigQuery ML](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Archive of Our Own Data Dump Explortory Data Analysis using BigQuery and Looker](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Comparative Analysis of Gamification in Education in R](http://example.com/)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+
+---
+[Train Derailment Dashboard Using Tableau Public](http://example.com/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
+
 
 ### Category Name 2
 
