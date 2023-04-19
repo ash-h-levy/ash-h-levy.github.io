@@ -5,7 +5,7 @@ Following the derailment that occurred in East Palestine, Ohio on February 3, 20
 
 
 ## 1. Finding Data
-The Federal Railroad Administration curates a comprehensive [database of rail equipment incidents and accidents](https://data.transportation.gov/Railroads/Rail-Equipment-Accident-Incident-Data/85tf-25kj), which is sourced from the Form 54 submissions. The Form 54 is a federal report that rail companies submit to report any incidents or accidents. As of March 2023, the database encompasses information spanning from 1975 to 2022.
+The Federal Railroad Administration curates a comprehensive database of rail equipment incidents and accidents, which is sourced from the Form 54 submissions. The Form 54 is a federal report that rail companies submit to report any incidents or accidents. As of March 2023, the database encompasses information spanning from 1975 to 2022.
 
 ## 2. Planning the Dashboard
 In the initial mockups that I designed, my intention was to utilize both a map and stacked line chart to effectively present the data. However, upon creating the stacked line chart, I noticed that certain data points were unclear due to scaling issues. Consequently, I realized the need to explore alternative visualizations that could better represent the data and convey its intended message with clarity.
