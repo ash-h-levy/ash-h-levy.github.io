@@ -17,7 +17,7 @@
 
 
 ---
-[Train Derailment Dashboard Using Tableau Public](http://example.com/)
+[Train Derailment Dashboard Using Tableau Public](/train.md)
 <img src="images/train dashboard.png?raw=true"/>
 ---
 
