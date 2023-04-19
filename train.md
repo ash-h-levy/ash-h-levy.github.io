@@ -42,7 +42,7 @@ To generate the sparkline scorecards, I created a line graph and removed the axe
 
 ### [Dashboard](https://public.tableau.com/views/DerailmentData/Dashboard32?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-<div class='tableauPlaceholder' id='viz1681937258218' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 (2) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DerailmentData&#47;Dashboard32&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DerailmentData&#47;Dashboard32' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DerailmentData&#47;Dashboard32&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>  
+![image of dashboard](images/train_dashboard_2.png)
 
 
 ### 4. Further Questions 
