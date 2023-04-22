@@ -1,19 +1,75 @@
-## This can be your internal website page / project page
+# Archive of Our Own 2021 Data Dump Explortory Data Analysis 
+The Archive of Our Own (AO3) is a popular fanfiction archive with over 7 million fanworks, encompassing various fandoms, pairings, and genres. As a platform, AO3 offers a wealth of data that can be analyzed and mined to gain insights into various aspects of fandom culture and behavior.
+This project aims to conduct an exploratory data analysis (EDA) on the AO3 dataset to uncover patterns and trends in fanfiction writing and consumption using BigQuery and Looker. The analysis will focus on the following research questions:
+1. What are the most popular fandoms on AO3?
+2. Which genres and pairings are the most popular?
+3. How has the number of fanworks on AO3 grown over time?
+4. How long are fanworks on average?
+5. What percentage of fanworks on AO3 are completed?
+6. What are the most popular languages used in fanworks on AO3? 
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## 1. ETL 
 
-### 1. Create a unique value for each entry
+The dataset used in this project was obtained from the Archive of Our Own (AO3) website. AO3 provided the dataset for analysis to the general public, which was then downloaded and uploaded to BigQuery for analysis. The dataset consists of two CSV files containing information on fanfiction works, including fandoms, genres, pairings, word count, date created, and date last updated. The files were uploaded to BigQuery using its user interface (UI) for further analysis.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-```SQL
+## 2. Create a unique value for each entry
+
+Sure, here's a revised version:
+
+The initial dataset obtained from the Archive of Our Own (AO3) did not contain a unique identifier for each work. To avoid potential issues with data analysis, it was necessary to assign a unique value to each work. This was achieved using BigQuery's GENERATE_UUID() function, which assigns a random universally unique identifier.
+
+The following SQL code was used to create a new column for the UUIDs, assign a unique ID to each row, and set the work_id as the primary key:
+
+
+``` SQL
+#Create column to add UUID to 
+ALTER TABLE `ao3-2021-data-dump.ao3_dump_2021.works`
+ADD COLUMN work_id STRING
+
+#Assigns unique id to each row. Each row at this point represents one unique work
 UPDATE `ao3-2021-data-dump.ao3_dump_2021.works`
 SET work_id = GENERATE_UUID()
 WHERE work_id IS NULL
 
+#Makes work_id the primary key for the table 
+ALTER TABLE `ao3-2021-data-dump.ao3_dump_2021.works`
+ADD PRIMARY KEY (work_id)
+NOT ENFORCED
+
+
 ```
 
-### 2. Assess assumptions on which statistical inference will be based
+With the unique ID assigned to each work, we can now perform various analyses and queries on the data without running into issues with duplicate or missing values. 
+
+
+## 5. Summary Data
+
+``` SQL
+SELECT
+  COUNT(DISTINCT work_id) AS work_count,
+  AVG(word_count) AS avg_word_count,
+  MAX(word_count) AS max_word_count,
+  MIN(creation_date) AS oldest_work,
+  ((
+    SELECT
+      COUNT(DISTINCT work_id)
+    FROM
+      `ao3-2021-data-dump.ao3_dump_2021.works`
+    WHERE
+      restricted = TRUE)/COUNT(work_id))*100 AS percent_restricted,
+  ((
+    SELECT
+      COUNT(DISTINCT work_id)
+    FROM
+      `ao3-2021-data-dump.ao3_dump_2021.works`
+    WHERE
+      complete = TRUE)/COUNT(work_id))*100 AS percent_completed,
+FROM
+  `ao3-2021-data-dump.ao3_dump_2021.works`
+ ```
+
+## 4. Finding the most common tags
 
 ```SQL
 WITH
