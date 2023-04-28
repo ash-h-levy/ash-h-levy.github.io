@@ -15,8 +15,6 @@ The dataset used in this project was obtained from the Archive of Our Own (AO3) 
 
 ## 2. Create a unique value for each entry
 
-Sure, here's a revised version:
-
 The initial dataset obtained from the Archive of Our Own (AO3) did not contain a unique identifier for each work. To avoid potential issues with data analysis, it was necessary to assign a unique value to each work. This was achieved using BigQuery's GENERATE_UUID() function, which assigns a random universally unique identifier.
 
 The following SQL code was used to create a new column for the UUIDs, assign a unique ID to each row, and set the work_id as the primary key:
@@ -40,10 +38,21 @@ NOT ENFORCED
 
 ```
 
-With the unique ID assigned to each work, we can now perform various analyses and queries on the data without running into issues with duplicate or missing values. 
+With the unique ID assigned to each work, various analyses and queries can be performed without running into issues with duplicate or missing values. 
 
 
 ## 5. Summary Data
+
+This SQL query calculates various statistics for the works in the AO3 dataset, including the total number of works, the average and maximum word count, the creation date of the oldest work, and the percentages of works that are restricted and completed. It uses the works table in the dataset as the source of the data.
+
+Summary statistics can provide valuable insights and help answer important questions about a dataset such as:
+
+* The total number of works can give an idea of the size and scope of the dataset, as well as the popularity of the platform or topic.
+* The average and maximum word counts can provide information about the typical length and range of works in the dataset, which may be indicative of genre or audience preferences.
+* The creation date of the oldest work can reveal how long the dataset has been active and can provide historical context for the content.
+* The percentages of works that are restricted and completed can give insights into the types of content and behavior that are allowed and encouraged on the platform.
+
+By analyzing summary statistics, it possible to gain a better understanding of the dataset as a whole, identify trends or patterns, and potentially make informed decisions about how to utilize or interact with the data.
 
 ``` SQL
 SELECT
@@ -69,7 +78,7 @@ FROM
   `ao3-2021-data-dump.ao3_dump_2021.works`
  ```
 
-## 4. Finding the most common tags
+## 5. Finding the most common tags
 
 ```SQL
 WITH
