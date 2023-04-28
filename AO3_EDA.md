@@ -50,7 +50,6 @@ Summary statistics can provide valuable insights and help answer important quest
 * The total number of works can give an idea of the size and scope of the dataset, as well as the popularity of the platform or topic.
 * The average and maximum word counts can provide information about the typical length and range of works in the dataset, which may be indicative of genre or audience preferences.
 * The creation date of the oldest work can reveal how long the dataset has been active and can provide historical context for the content.
-* The percentages of works that are restricted and completed can give insights into the types of content and behavior that are allowed and encouraged on the platform.
 
 By analyzing summary statistics, it possible to gain a better understanding of the dataset as a whole, identify trends or patterns, and potentially make informed decisions about how to utilize or interact with the data.
 
@@ -59,14 +58,7 @@ SELECT
   COUNT(DISTINCT work_id) AS work_count,
   AVG(word_count) AS avg_word_count,
   MAX(word_count) AS max_word_count,
-  MIN(creation_date) AS oldest_work,
-  ((
-    SELECT
-      COUNT(DISTINCT work_id)
-    FROM
-      `ao3-2021-data-dump.ao3_dump_2021.works`
-    WHERE
-      restricted = TRUE)/COUNT(work_id))*100 AS percent_restricted,
+  MIN(creation_date) AS oldest_work, 
   ((
     SELECT
       COUNT(DISTINCT work_id)
