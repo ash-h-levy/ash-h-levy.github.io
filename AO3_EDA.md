@@ -70,7 +70,14 @@ FROM
   `ao3-2021-data-dump.ao3_dump_2021.works`
  ```
 
-## 5. Finding the most common tags
+## 5. Work Count Running Total 
+
+This query calculates the running total of works created each day on the Archive of Our Own website.
+
+It first uses a Common Table Expression (CTE) named works_created_by_day to count the number of works created on each day, grouping them by the creation_date.
+
+Then, the code selects the creation_date and calculates the running total by summing up the work_count column using the SUM() function with an OVER() clause that orders the rows by creation_date. Finally, it groups the results by creation_date and work_count.
+
 
 ```SQL
 WITH
@@ -95,7 +102,17 @@ GROUP BY
 
 ```
 
-### 3. Support the selection of appropriate statistical tools and techniques
+## 6. Most Popular Tags
+
+This query is used to generate a table showing the number of works associated with each tag on the Archive of Our Own website.
+
+The query first creates a temporary table unnest_tag_id which splits the tag field in the works table into individual tag IDs and associates them with the corresponding work_id. The tag_id_split subquery uses the SPLIT() function to break up the tag field into an array of individual tag IDs. The unnest() function is then used to create a row for each tag ID associated with a work_id.
+
+The second temporary table, tag_id_as_string, is used to join the tag IDs from the unnest_tag_id table with the tag names and types from the tags table. The CAST() function is used to convert the tag IDs to string format so that they can be joined with the tag_id_string field in the unnest_tag_id table.
+
+Finally, the query selects the tag_id_string, tag_name, and a count of the number of distinct work_ids associated with each tag. The results are grouped by tag_id_string and tag_name and ordered by the count of works in descending order.
+
+A statement in the WHERE clause could be added to filter the results by tag type, but for this project, the filter feature within Looker was used to filter the data for the dashboard.
 
 ``` SQL
 WITH
@@ -130,16 +147,15 @@ JOIN
   tag_id_as_string
 ON
   tag_id_string = tag_id
-WHERE
-  tag_type = "Freeform"
 GROUP BY
   tag_id_string,
   tag_name
 ORDER BY
   work_count DESC
 ```
-### 4. Provide a basis for further data collection through surveys or experiments
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+## 6. Most Common Languages 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+## 7. Creating the Dashboard
+
