@@ -4,10 +4,7 @@
 
 ### Projects
 
-[DDOS Attack Detection Using BigQuery ML](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
----
 [Archive of Our Own Data Dump Explortory Data Analysis using BigQuery and Looker](/pdf/sample_presentation.pdf)
 <img src="images/AO3 dashbaord.jpg?raw=true">
 
@@ -21,6 +18,10 @@
 <img src="images/train dashboard.png?raw=true"/>
 ---
 
+[Superstore Customer Cohort Analysis using a Tableau Accelerator](/superstore_accelerator.md)
+<img src="images/Customer Cohort Report.png?raw=true"/>
+
+---
 
 ### Other Projects
 
