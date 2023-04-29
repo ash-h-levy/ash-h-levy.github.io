@@ -18,9 +18,10 @@ The data was obtained from [Tableau Public](https://public.tableau.com/app/resou
 
 The Tableau Exchange offers a range of accelerators that provide pre-built dashboards for various business needs. For this project, the focus was on analyzing customer data from a retail store, so accelerators in the Retail section were explored. The [BizStory Customer Cohort Accelerator](https://exchange.tableau.com/products/830) was selected as it was well-suited to answering questions about customer acquisition and retention, which were key areas of interest for the project. Furthermore, the Superstore dataset contained all the necessary fields required for analysis using this accelerator.
 
-
 ## 3. Cleaning and Preparing the Data
 
-https://docs.google.com/spreadsheets/d/1SmlyD7npMNuwt5SzDegEI9TZUSsW0-gibEXgBZYYjik/edit?usp=sharing
+Based on the instructions provided with the accelerator, a table with six specific fields needed to be created. To fulfill this requirement, a new sheet was created in Google Sheets. The necessary fields were populated with data using formulas that referenced data from other sheets within the same workbook. The segment field was used instead of the sub-category field as it provided more relevant and useful insights for the analysis. This approach ensured that any changes made to the original data were automatically reflected in the newly created table.
+
+[Google Sheet](https://docs.google.com/spreadsheets/d/1SmlyD7npMNuwt5SzDegEI9TZUSsW0-gibEXgBZYYjik/edit?usp=sharing)
 
 ## 4. Editing the Dashboard 
