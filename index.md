@@ -20,8 +20,8 @@
 
 ---
 
-- [Running Data Dashboard]([http://example.com/](https://public.tableau.com/views/MyRunningData_16767026599740/Mileage2?:language=en-US&:display_count=n&:origin=viz_share_link))
-- [Russian Losses in Ukraine Dashboard]([http://example.com/](https://public.tableau.com/views/OneYearofRussianLossesinUkraine/Dashboard22?:language=en-US&:display_count=n&:origin=viz_share_link))
+- [Running Data Dashboard](https://public.tableau.com/views/MyRunningData_16767026599740/Mileage2?:language=en-US&:display_count=n&:origin=viz_share_link)
+- [Russian Losses in Ukraine Dashboard](https://public.tableau.com/views/OneYearofRussianLossesinUkraine/Dashboard22?:language=en-US&:display_count=n&:origin=viz_share_link)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
 - [Project 5 Title](http://example.com/)
