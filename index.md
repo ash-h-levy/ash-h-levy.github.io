@@ -2,7 +2,7 @@
 
 ---
 
-[Archive of Our Own Data Dump Explortory Data Analysis using BigQuery and Looker](/pdf/sample_presentation.pdf)
+[Archive of Our Own Data Dump Explortory Data Analysis using BigQuery and Looker](/AO3_EDA.md)
 <img src="images/AO3 dashbaord.jpg?raw=true">
 
 ---
