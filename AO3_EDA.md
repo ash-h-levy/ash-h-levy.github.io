@@ -156,6 +156,25 @@ ORDER BY
 
 ## 6. Most Common Languages 
 
+To analyze the language distribution of works on AO3, a different approach was taken compared to querying the tags. The language information was actually stored within the works table, but it provided language codes instead of the actual language names. While the language codes do convey the necessary information, it can be challenging to interpret less common languages or for users who are not familiar with the two-character codes.
+
+To address this, a dataset containing language codes and names was obtained from Data Hub. This dataset was uploaded as a table into BigQuery. By performing a join operation, specifically a right join, between the works table and the language table from Data Hub, it became possible to retrieve the actual names of the languages associated with the language codes in the works table. The right join ensured that any language codes not included in the Data Hub dataset would still be preserved in the results.
+
+The SQL code then selects the language name and applies the count aggregation function to calculate the number of distinct work IDs for each language. The results are grouped by the language code and language name, ensuring that the counts are aggregated per language. Finally, the results are ordered in descending order based on the number of works, providing insights into the most common languages used on AO3.
+
+```SQL 
+SELECT
+  language_name,
+  COUNT(DISTINCT work_id) AS works
+FROM `ao3-2021-data-dump.ao3_dump_2021.works`
+RIGHT JOIN `ao3-2021-data-dump.ao3_dump_2021.language`
+  ON `code` = `language`
+GROUP BY `language`, language_name
+ORDER BY works desc
+
+
+```
+
 
 ## 7. Creating the Dashboard
 
