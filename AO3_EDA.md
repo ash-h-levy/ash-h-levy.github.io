@@ -176,5 +176,18 @@ ORDER BY works desc
 ```
 
 
-## 7. Creating the Dashboard
+## 7. [Creating the Dashboard](https://lookerstudio.google.com/reporting/a85d3850-afa0-4614-b8b5-93bb71d3730b)
 
+![image of dashboard](images/AO3_dashbaord.jpg)
+
+The final step in the project involved creating a dashboard using Looker to visualize and explore the data. The data was imported into Looker using the SQL queries that were previously written.
+
+To start, tables were created in Looker for the most common tags of different types: fandom, relationship, character, and content. Since the SQL queries returned the most common tags without filtering by type, Looker's filtering capability was utilized to filter the data by tag type. Initially, the plan was to display the top 10 most common tags for each type, but it was later decided to provide users with the option to explore further. The interactive nature of the dashboard allows users to scroll or page through the data as they dive deeper into the tag details. 
+
+Similar to the tag tables, a language table was also created using relevant data to provide insights into the distribution of languages on AO3.
+
+The dashboard layout was designed with a focus on addressing the original questions. Scorecards were positioned at the top, providing concise and relevant information that quickly answers the questions. Below the scorecards, an archive growth graph was included to showcase the exponential growth of the archive over time. 
+
+Following these elements, the previously created tables were placed to present detailed information on the most common tags. However, for the category and rating tag types, pie graphs were used instead of tables. This decision was based on the nature of these tag types, which have a small and finite number of potential values. In contrast, the other tag types (fandoms, relationships, content, and characters) have a large number of potential values, with new tags being generated as more fanworks are added to the archive.
+
+Overall, the Looker dashboard provides an interactive and visually appealing way to explore the data, enabling users to gain insights into the most common tags, archive growth, and the distribution of different tag types.
