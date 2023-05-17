@@ -27,7 +27,7 @@
 <img src="images/equipment_dash.png?raw=true"/>
           
 ---
-          
+### Find Me         
 - [Tableau Public](https://public.tableau.com/app/profile/ashley.levy8624)
 - [Kaggle](https://www.kaggle.com/ashleylevy)
 
