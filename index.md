@@ -15,15 +15,17 @@
 <img src="images/train dashboard.png?raw=true"/>
 ---
 
-[Superstore Customer Cohort Analysis using a Tableau Accelerator](/superstore_accelerator.md)
-<img src="images/Customer Cohort Report.png?raw=true"/>
+[Running Data Dashboard Using Tableau Public and Google Sheets](/running_dashboard.md)
+<img src="images/running_dash_v3.png?raw=true"/>
 
 ---
-
-- [Running Data Dashboard](https://public.tableau.com/views/MyRunningData_16767026599740/Mileage2?:language=en-US&:display_count=n&:origin=viz_share_link)
-- [Russian Losses in Ukraine Dashboard](https://public.tableau.com/views/OneYearofRussianLossesinUkraine/Dashboard22?:language=en-US&:display_count=n&:origin=viz_share_link)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+          
+[Russian Losses in Russo-Ukrainian War Dashboard Using Tableau Public and Google Sheets](/russo-ukrainian_war_dash.md)
+<img src="images/equipment_dash.png?raw=true"/>
+          
+---
+          
+- [Tableau Public](https://public.tableau.com/app/profile/ashley.levy8624)
+- [Kaggle](https://www.kaggle.com/ashleylevy)
 
 ---
