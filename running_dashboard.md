@@ -1,14 +1,14 @@
-#Running Data Dashboard 
+# Running Data Dashboard 
 
 
-##1. Gathering Data
+## 1. Gathering Data
 
 
 To create a comprehensive running data source, I gathered information from three different apps: Nike Running, Apple Workout, and Garmin Connect. To consolidate the data into a single platform, I utilized an app called Run Gap, which allowed me to upload workouts from Nike and Apple to Garmin. Garmin served as the primary storage for most of my runs and also provided the option to download a CSV file containing detailed workout data.
 
 
 	
-##2. Data Cleaning and Preparation 
+## 2. Data Cleaning and Preparation 
 
 
 To ensure the accuracy and uniformity of the data, I followed several steps after uploading the CSV file into Google Drive and opening it in Google Sheets. Firstly, I removed irrelevant values from the dataset. By default, Garmin includes data fields that are not pertinent to running and consist of null values.
