@@ -25,4 +25,10 @@ This process was also applied to the personnel data for calculating daily losses
 
 ## 3. [Creating the Dashboard](https://public.tableau.com/app/profile/ashley.levy8624/viz/RussianLossesinRusso-UkrainianWar/Dashboard23) 
 
+I connected the data sheet to Tableau Public and encountered an issue with the format. The data was in a wide format, which made it difficult to create a stacked area chart for equipment losses. To overcome this, I used Tableau's pivot functionality to transform the data into a suitable format for the desired chart.
 
+Initially, I had both the equipment and personnel data on a single dashboard. However, after careful consideration, I decided to separate them into two distinct dashboards for better clarity and focus.
+
+To provide a quick overview of the losses, I included scorecards that display the total losses and highlight the overall impact. These scorecards enable users to get a clear picture of the magnitude of the losses.
+
+Additionally, I incorporated a stacked area chart and bar charts to showcase the rate at which the losses occurred. These visualizations offer valuable insights into the intensity of the fighting and facilitate a deeper understanding of the data.
